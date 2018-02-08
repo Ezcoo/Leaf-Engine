@@ -5,3 +5,5 @@
 */
 
 private [""];
+
+hint "Juopale-justice ja Etanoli-Ezcoo rilluttelivat Georgetownin kapakassa viime yönä";
