@@ -1,0 +1,16 @@
+#include functions.hpp
+
+enableDebugConsole=2;
+
+disabledAI=1;
+author="Ezcoo";
+onLoadName="Revolution 0.1";
+onLoadMission="Mission powered by Leaf Engine by Ezcoo";
+
+class Header {
+
+    gametype=RPG;
+    minPlayers=1;
+    maxPlayers=100;
+
+};

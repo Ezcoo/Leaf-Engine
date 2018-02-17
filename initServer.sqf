@@ -4,6 +4,10 @@
 	returns: nothing
 */
 
-[] call CORE_server_initServer;
+// Compile server functions
 
-hint "Juopale-justice ja Etanoli-Ezcoo rilluttelivat Georgetownin kapakassa viime yönä";
+
+
+// Compile common (shared) functions
+
+[] call CORE_server_initServer;
