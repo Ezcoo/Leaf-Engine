@@ -4,6 +4,6 @@
 	returns: nothing
 */
 
-private [""];
+[] call CORE_server_initServer;
 
 hint "Juopale-justice ja Etanoli-Ezcoo rilluttelivat Georgetownin kapakassa viime yönä";
