@@ -4,10 +4,26 @@
 	returns: nothing
 */
 
+_commonFunctions = [
+    "Core\Common\something.sqf"
+];
+
+_serverFunctions = [
+    "Core\Server\initServer.sqf"
+];
+
+// Compile common functions
+
+{
+    call compile preprocessFileLineNumbers _x;
+} forEach _commonFunctions;
+
 // Compile server functions
 
+{
+    call compile preprocessFileLineNumbers _x;
+} forEach _serverFunctions;
 
-
-// Compile common (shared) functions
+// Call just compiled server init function
 
 [] call CORE_server_initServer;
