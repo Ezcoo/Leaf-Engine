@@ -6,6 +6,6 @@
 
 CORE_server_initServer = {
 
-    [] call REVOLUTION_INIT_server_initServer;
+    [] call (format ["%1_INIT_server_initServer", MISSION_PREFIX]);
 
 };

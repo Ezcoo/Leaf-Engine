@@ -4,4 +4,4 @@
 	returns: nothing
 */
 
-[] remoteExec ["MODULE_INIT_server_initPlayer",2];
+[] remoteExec ["MODULE_INIT_server_initPlayer", 2];

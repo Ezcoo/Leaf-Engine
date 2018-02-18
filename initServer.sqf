@@ -12,18 +12,22 @@ _serverFunctions = [
     "Core\Server\initServer.sqf"
 ];
 
-// Compile common functions
 
+    // IMPORTANT: determine which mission Leaf Engine is running
+MISSION_PREFIX = "REVOLUTION";
+
+
+    // Compile common functions
 {
     call compile preprocessFileLineNumbers _x;
 } forEach _commonFunctions;
 
-// Compile server functions
 
+    // Compile server functions
 {
     call compile preprocessFileLineNumbers _x;
 } forEach _serverFunctions;
 
-// Call just compiled server init function
 
+// Call just compiled server init function
 [] call CORE_server_initServer;
