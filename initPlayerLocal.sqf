@@ -4,18 +4,29 @@
 	returns: nothing
 */
 
-_clientFunctions = [
+_commonFunctions =
+[
 ];
 
-    // Compile client functions - note that common functions have been initialized in initServer.sqf already
-    // - see BIKI documentation about initialization order
+_clientFunctions =
+[
+];
+
+
+    // Compile common functions
 {
-    call compile preprocessFileLineNumbers _x;
+    call compileFinal preprocessFileLineNumbers _x;
+} forEach _commonFunctions;
+
+    // Compile client functions
+{
+    call compileFinal preprocessFileLineNumbers _x;
 } forEach _clientFunctions;
 
 
     // Delegate the player initialization to Leaf Engine core
     // For the sake of simplicity, all joining clients are handled like JIP
-[] execVM "Core\Client\Init\initPlayerJIP.sqf";
+_initPlayerJIP = [] execVM "Core\Client\Init\initPlayerJIP.sqf";
+waitUntil { scriptDone _initPlayerJIP };
 
 hint "Juopale-justice ja Etanoli-Ezcoo rilluttelivat Georgetownin kapakassa viime yönä";

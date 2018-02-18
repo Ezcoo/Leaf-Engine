@@ -4,26 +4,29 @@
 	returns: nothing
 */
 
-_commonFunctions = [
+_commonFunctions =
+[
 ];
 
-_serverFunctions = [
+_serverFunctions =
+[
 ];
 
 
     // IMPORTANT: determine which mission Leaf Engine is running
+    // Note to self: refactor later to proper config
 MISSION_PREFIX = "REVOLUTION";
 
 
     // Compile common functions
 {
-    call compile preprocessFileLineNumbers _x;
+    call compileFinal preprocessFileLineNumbers _x;
 } forEach _commonFunctions;
 
 
     // Compile server functions
 {
-    call compile preprocessFileLineNumbers _x;
+    call compileFinal preprocessFileLineNumbers _x;
 } forEach _serverFunctions;
 
 

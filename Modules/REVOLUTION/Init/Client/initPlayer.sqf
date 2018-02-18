@@ -4,8 +4,4 @@
 	returns: nothing
 */
 
-REVOLUTION_INIT_client_fnc_initPlayer = {
-
-    somePlaceholderVariable = true;
-
-};
+private [""];
