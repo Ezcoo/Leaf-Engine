@@ -5,7 +5,6 @@
 */
 
 _clientFunctions = [
-    "Core\Client\initPlayerJIP.sqf"
 ];
 
     // Compile client functions - note that common functions have been initialized in initServer.sqf already
@@ -14,8 +13,9 @@ _clientFunctions = [
     call compile preprocessFileLineNumbers _x;
 } forEach _clientFunctions;
 
-[] call CORE_client_initClient;
+
+    // Delegate the player initialization to Leaf Engine core
+    // For the sake of simplicity, all joining clients are handled like JIP
+[] execVM "Core\Client\Init\initPlayerJIP.sqf";
 
 hint "Juopale-justice ja Etanoli-Ezcoo rilluttelivat Georgetownin kapakassa viime yönä";
-
-    //Remember to add remoteExecCall from client to server to activate JIP on server

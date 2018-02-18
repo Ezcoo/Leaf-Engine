@@ -5,11 +5,9 @@
 */
 
 _commonFunctions = [
-    "Core\Common\something.sqf"
 ];
 
 _serverFunctions = [
-    "Core\Server\initServer.sqf"
 ];
 
 
@@ -29,5 +27,5 @@ MISSION_PREFIX = "REVOLUTION";
 } forEach _serverFunctions;
 
 
-// Call just compiled server init function
-[] call CORE_server_initServer;
+    // Delegate actual server initialization to Leaf Engine core
+[] execVM "Core\Server\Init\initServer.sqf";
