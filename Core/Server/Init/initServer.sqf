@@ -4,4 +4,4 @@
 	returns: nothing
 */
 
-[] execVM (format ["Modules\%1\Init\Server\initServer", MISSION_PREFIX]);
+[] execVM (format ["Modules\%1\Init\Server\initServer.sqf", MISSION_PREFIX]);
