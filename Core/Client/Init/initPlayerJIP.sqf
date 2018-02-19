@@ -7,7 +7,7 @@
     // HC will probably be quite inactive player, so it doesn't need player's functionality
 if (hasInterface) then
 {
-        // Initialize local variables for player
+        // Initialize local variables and scripts for player
     _initPlayerLocal = [] execVM (missionNamespace getVariable format ["Modules\%1\Init\Client\initPlayer.sqf", MISSION_PREFIX]);
     waitUntil { scriptDone _initPlayerLocal };
 
