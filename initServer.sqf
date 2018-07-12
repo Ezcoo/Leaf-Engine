@@ -15,7 +15,7 @@ _serverFunctions =
 
     // IMPORTANT: determine which mission Leaf Engine is running
     // Note to self: refactor later to proper config
-MISSION_PREFIX = "REVOLUTION";
+MISSION_PREFIX = "COMMANDCONQUER";
 
 
     // Compile common functions
