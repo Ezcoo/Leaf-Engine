@@ -29,4 +29,4 @@ _clientFunctions =
 _initPlayerJIP = [] execVM "Core\Client\Init\initPlayerJIP.sqf";
 waitUntil { scriptDone _initPlayerJIP };
 
-hint "Juopale-justice ja Etanoli-Ezcoo rilluttelivat Georgetownin kapakassa viime yönä";
+hint "Player initialization complete!";
