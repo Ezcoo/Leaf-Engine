@@ -4,4 +4,3 @@
 	returns: nothing
 */
 
-private [""];
